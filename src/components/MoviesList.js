@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import styled from 'styled-components';
 import Movie from './Movie';
+import Test from './Test';
 import { getMovies } from '../actions/movies';
 
 class MoviesList extends PureComponent {
@@ -22,6 +23,7 @@ class MoviesList extends PureComponent {
     }
     return (
       <MovieGrid>
+        <Test />
         {movies.map(movie => <Movie key={movie.id} movie={movie} />)}
       </MovieGrid>
     );

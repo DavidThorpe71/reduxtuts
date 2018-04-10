@@ -1,5 +1,5 @@
 /* eslint react/no-did-mount-set-state: 0 */
-import React, { Component } from 'react';
+import React from 'react';
 import {
   BrowserRouter as Router,
   Route,
@@ -19,6 +19,7 @@ import rootReducer from './reducers/rootReducer';
 import MoviesList from './components/MoviesList';
 import MovieDetail from './components/MovieDetail';
 import Toggle from './components/Toggle';
+
 
 const middleware = [logger, thunk];
 

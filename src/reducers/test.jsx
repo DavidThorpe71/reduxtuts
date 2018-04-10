@@ -1,18 +1,19 @@
-import { TOGGLE_MESSAGE } from '../actions/message';
+import { CHANGE_TEST_OUTCOME } from '../actions/test';
 
 const initialState = {
-    messageVisibility: false,
+    testSuccess: false,
 };
 
 export default function (state = initialState, action) {
     const { type } = action;
     switch (type) {
-        case TOGGLE_MESSAGE:
+        case CHANGE_TEST_OUTCOME:
             return {
                 ...state,
-                messageVisibility: !state.messageVisibility,
+                testSuccess: !state.testSuccess
             };
         default:
             return state;
     }
+
 }
